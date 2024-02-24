@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Poppins&display=swap');
+
 * {
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 400;
+
+  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', 
+  sans-serif; */
+
+  
+  
+  /* font-weight: 400; */
   font-size: 17.5px;
   color: rgb(0, 0, 0);
   word-wrap: normal;
@@ -35,9 +42,20 @@ body {
   background-color: #826fa5;
   background-color: rgb(236, 236, 236);
 
+  background: rgb(148,0,211);
+  
+  /* background: linear-gradient(0deg, rgb(177, 98, 211) 60%, rgb(193, 50, 255) 90%); */
+
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), to(rgb(193, 50, 255))) fixed;
+  
+  /* 0% indica o início do gradiente, e 100% indica o final */
+
   height: 100%;
   margin: 0;
-  padding: 0;
+  padding: 0; 
+
+  font-family: 'Nunito', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* TELA DE CARREGAMENTO */
@@ -77,6 +95,7 @@ body {
 
 a {
   text-decoration: none;
+  
 }
 
 .a-menu {
@@ -89,7 +108,67 @@ a {
 
   align-items: center;
 
-  background: #212222;
+  /* background: #212222; */
+  background: rgb(148,0,211);
+  background: linear-gradient(0deg, rgb(141, 3, 201) 6%, rgb(193, 50, 255) 100%);
+
+ /* border: 4px solid #03bb85; */
+
+
+  --border-width: 3px;
+  position: relative; /* teste tirando*/
+  /*display: inline-block; */
+  padding: var(--border-width);
+  overflow: hidden;
+  /* cursor: pointer; */
+  
+
+}
+
+.inicio-border {
+  position: absolute;
+
+  inset: 0;
+
+
+  padding: var(--border-width);
+
+
+
+  -webkit-mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
+
+  
+   mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
+
+  -webkit-mask-composite: xor;
+
+   mask-composite: exclude; 
+
+  
+  border-radius: inherit;
+  opacity: 1; /* Defina a opacidade para 1 para que a borda seja sempre visível */
+
+  
+}
+
+.inicio-border::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 200%;
+  min-height: 200%;
+  aspect-ratio: 1/1;
+  background: conic-gradient(from 0deg,  rgb(141, 3, 201), rgb(141, 3, 201), #00ffb3, #00ffb3, rgb(141, 3, 201), rgb(141, 3, 201), #00ffb3, #00ffb3);
+
+  transform: translate(-50%, -50%) rotate(0deg);
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
 }
 
 #menu {
@@ -97,6 +176,7 @@ a {
   display: flex;
   justify-content: center;
   text-align: center;
+  font-weight: 500;
   gap: 3rem;
   margin-top: 30px;
   padding-right: 40px;
@@ -107,27 +187,70 @@ ul {
   list-style: none;
   display: flex;
   gap: 1.8rem;
+
+  z-index: 10; /* adicionado por conta do mask na borda */
 }
 
 li {
   text-align: center;
 }
 
-li:hover {}
+li:hover {
+
+}
+
+.zoom-element {
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Transição suave para a propriedade transform (zoom) */
+}
+
+.zoom-element:hover {
+  transform: scale(1.1); /* Zoom suave quando o mouse passa sobre o elemento */
+}
+
+
+@media (max-width: 600px) {
+  ul {
+    gap: 1.3rem;
+  }
+}
+
+.image-link{
+  
+}
 
 #imgMenu {
   width: 320px;
   margin-top: 20px;
+  
 }
 
 #apresentation {
   height: 59.2vh;
+  
+  /* height: 92vh; */
+
 }
 
 /* Estilo para o ::before (imagem de fundo) */
 #apresentation::before {
   content: ""; /* Conteúdo vazio necessário para a pseudo-classe ::before */
-  background-image: url('https://images.pexels.com/photos/39811/pexels-photo-39811.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb'); /* Substitua 'sua-imagem.jpg' pelo caminho da sua imagem de fundo */
+
+
+
+  background-image: url('../assets/images/1_resized.jpg'); 
+  
+
+/*  background-image: url('../assets/images/2_resized.jpg'); 
+
+
+  background-image: url('../assets/images/3_resized.jpg'); 
+
+  background-image: url('../assets/images/4_resized.jpg'); */
+
+
+
   background-size: cover; /* A imagem de fundo será dimensionada para cobrir toda a área da seção */
   background-position: center center; /* Centraliza a imagem de fundo */
   background-repeat: no-repeat; /* Evita a repetição da imagem */
@@ -138,7 +261,7 @@ li:hover {}
   height: 100%;
   opacity: 95%; /* Ajuste a opacidade conforme necessário (0 a 1) */
   z-index: -1;
-  filter: brightness(51%);
+  /* filter: brightness(95%); */
 }
 
 
@@ -187,10 +310,9 @@ li:hover {}
   }
 }
 
-
 #apresentation-text-text{
   color: white;
-  font-weight: 600;
+  font-weight: 300;
 }
 
 .apresentation-typing-effect{
@@ -200,9 +322,25 @@ li:hover {}
 
 .apresentation-typing-effect-text {
   opacity: 0; /* Inicialmente, definimos a opacidade para 0 */
-  transition: opacity 2.3s ease-in; /* Adicionando uma transição suave de 1 segundo */
+  transition: opacity 2.8s ease-in; /* Adicionando uma transição suave de 1 segundo */
 }
 
+@media (max-width: 600px) {
+  #mensagemSaudacao {
+    animation: typing 2.4s steps(40), hideBorder 1.5s 1.5s forwards; 
+    overflow: hidden;
+    border-right: 1px solid #000000;    
+  }
+
+  .apresentation-typing-effect{
+    opacity: 0; /* Inicialmente, definimos a opacidade para 0 */
+    transition: opacity 2s ease-in; /* Adicionando uma transição suave de 1 segundo */
+  }
+}
+
+@media (max-width: 800px) {
+
+}
 
 .apresentation-buy-div {
   text-align: center;
@@ -216,16 +354,28 @@ li:hover {}
   padding-left: 3%;
   height: 55px;
   width: 50%;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(0, 255, 128);
   
-  border: 2px solid rgb(194, 188, 188);
-  box-shadow: 0 0 10px 0 rgba(0.1, 0.2, 0, 0.3);
+  /* ANTIGO
+  border: 2px solid rgb(110, 102, 102); */
+  border: 2px solid rgb(150, 128, 128);
+  box-shadow: 0 0 10px 0 rgba(14, 14, 14, 0.527);
+
   border-radius: 200px 0px 200px 0px;
   -webkit-border-radius: 200px 0px 200px 0px;
   -moz-border-radius: 200px 0px 200px 0px;
   cursor: pointer;
+  animation: pulse 5s infinite;
 }
 
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+}
 
 .apresentation-buy-button,
 .apresentation-buy-button:hover {
@@ -233,17 +383,24 @@ li:hover {}
 }
 
 .apresentation-buy-button {
-  background-color: #ffffff; /* Cor de fundo padrão (saída) */
+  background-color: rgb(0, 255, 128); /* Cor de fundo padrão (saída) */
+
 }
 
 .apresentation-buy-button:hover {
-  background-color: #e974b8; /* Cor de fundo ao passar o mouse (entrada) */
+  background-color: rgb(0, 214, 107); /* Cor de fundo ao passar o mouse (entrada) */
 }
 
 .fa-leaf{
   font-size: 20px;
 }
 
+@media (max-width: 500px) {
+  .apresentation-buy-button {
+    width: 80%;
+    font-size: 13px;
+  }
+}
 
 @media (max-width: 600px) {
   .apresentation-buy-button {
@@ -296,9 +453,7 @@ li:hover {}
 
 #news {
   height: 92vh;
-  border-top: solid 1px;
-  border-bottom: solid 1px;
-  border-color: rgb(204, 203, 203);
+
   /* MUDAR DE ACORDO COM A COR DE FUNDO */
 }
 
@@ -326,7 +481,7 @@ a:hover {
 
   align-items: center;
 
-  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  /* font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif; */
 
   background: #513e74;
 
@@ -469,6 +624,10 @@ a:hover {
   font-size: 32px;
 }
 
+.productsTitle{
+  /* coloque o "afastamento" do titulo*/
+}
+
 .products-card {
   /* AJUSTAR RESPONSIVIDADE E VISUALIZAÇÃO PARA MODO LISTA EM DISPOSITIVOS MENORES*/
   display: flex;
@@ -533,59 +692,93 @@ a:hover {
   text-align: center;
   margin-top: 3%;
   margin-bottom: 2.4%;
-  margin-left: 4%;
+
+  /*margin-left: 3%; */
+}
+
+
+@media (max-width: 400px) {
+  .productsTitle{
+    padding-top: 17%;
+  }
 }
 
 @media (max-width: 600px) {
+  .productsTitle{
+    
+  }
+
   .buy-div {
-    margin-left: 16%;
+    /* margin-left: 16%; */
+    margin-left: 9%;
   }
 }
 
 @media (max-width: 800px) {
   .buy-div {
-    margin-left: 16%;
+    /* margin-left: 16%; */
   }
 }
 
 @media (max-width: 1000px) {
   .buy-div {
-    margin-left: 16%;
+    /* margin-left: 16%; */
   }
 }
 
 @media (max-width: 1100px) {
   .buy-div {
-    margin-left: 9%;
+    /* margin-left: 9%; */
   }
 }
 
 @media (max-width: 1300px) {
   .buy-div {
-    margin-left: 9%;
+   /* margin-left: 9%; */
   }
 }
 
 @media (max-width: 600px) {
   .buy-div {
-    width: 98%;
-    padding-right: 5%;
+    width: 89%;
+    padding-right: 6%;
   }
 }
+
 
 .buy-button {
   text-align: center;
   justify-content: center;
-  /* padding-right: 1%; */
+
+  padding-left: 5%; /* ADICIONADO RECENTEMENTE: 04/10/2023 */
+
   height: 55px;
   width: 80%;
   background-color: rgb(255, 255, 255);
   border-color: white;
   border-radius: 12px;
+  
+  /* ANTIGO
   border: 2px solid rgb(194, 188, 188);
-  box-shadow: 0 0 10px 0 rgba(0.1, 0.2, 0, 0.3);
+  box-shadow: 0 0 10px 0 rgba(0.1, 0.2, 0, 0.3); */
+
+  border: 2px solid rgb(150, 128, 128);
+  box-shadow: 0 0 10px 0 rgba(14, 14, 14, 0.527);
+
+
   cursor: pointer;
   font-size: 14px;
+  animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+
 }
 
 .buy-button,
@@ -594,23 +787,25 @@ a:hover {
 }
 
 .buy-button {
-  background-color: #ffffff; /* Cor de fundo padrão (saída) */
+  background-color: rgb(0, 255, 128); /* Cor de fundo padrão (saída) */
 }
 
 .buy-button:hover {
-  background-color: #09ff00c0; /* Cor de fundo ao passar o mouse (entrada) */
+  background-color: rgb(0, 214, 107); /* Cor de fundo ao passar o mouse (entrada) */
 }
 
 @media (max-width: 768px) or (max-width: 968px) or (max-width: 1068px) or (max-width: 1268px) or (max-width: 1568px) or (max-width: 1868px) or (max-width: 2000px){
   .buy-button {
       font-size: 14px; 
-      padding-left: 10.2%;
+      /*padding-left: 10.2%;
+      padding-right: 39px; */
   }
 }
 
 @media (max-width: 600px){
   .buy-button {
     width: 89%;
+    /*padding-right: 39px; */
 }
 }
 
@@ -864,9 +1059,8 @@ a:hover {
 
 /* ESTILIZAÇÃO DO RODAPÉ (FOOTER) */
 #contact {
-  margin-top: -2px;
+  margin-top: %; /* antes: -2*/
   padding-top: 0px;
-  border-top: 1px solid rgb(220, 220, 220);
   width: 100%;
 }
 
@@ -895,24 +1089,109 @@ a:hover {
   color: rgb(51, 0, 255);
 }
 
-.contactIcons{
-  margin-left: 4%;
+.contactIcons ul{
+justify-content: center;
+align-items: center;
+text-align: center;
+  
+padding-top: 1.5%;
+padding-right: 41.5px;
+gap: 0.6rem;
 }
 
+@media (max-width: 300px) {
+  .contactIcons ul{
+    padding-right: px;
+
+  }
+
+  .footer-development{
+    padding-right: 5%;
+  }
+
+}
+
+@media (max-width: 400px) {
+  .contactIcons ul{
+    padding-right: 50px;
+
+  }
+
+  .footer-development{
+    padding-right: 5%;
+  }
+
+  #contact {
+    margin-top: %; /* antes: -2*/
+  }
+
+}
+
+@media (max-width: 600px) {
+  #contact {
+    margin-top: %; /* antes: -2*/
+  }
+}
+
+
+@media (max-width: 800px) {
+  #contact {
+    margin-top: %; /* antes: -2*/
+  }
+}
+
+@media (max-width: 1000px) {
+  #contact {
+    margin-top: %; /* antes: -2*/
+  }
+}
+
+@media (max-width: 1200px) {
+  #contact {
+    margin-top: %; /* antes: -2*/
+  }
+}
+
+
+@media (max-width: 1400px) {
+  #contact {
+    margin-top: %; /* antes: -2*/
+  }
+}
+
+@media (max-width: 600px) {
+  #contact {
+    margin-top: 40%; /* antes: -2*/
+  }
+}
+
+@media (max-width: px) {
+  #contact {
+    margin-top: 68%; /* antes: -2*/
+  }
+}
+
+
+
+
+.p-ul-li-contact-icons{
+  font-size: 13px;
+}
 
 i {
-  padding-right: 80px;
+  /* padding-right: 80px; */
   height: 10px;
   width: 50px;
-  font-size: 35px;
+  font-size: 28px;
   cursor: pointer;
-}
+} 
 
 #instagramIcon,
 #tiktokIcon,
 #googleIcon,
 #pinterestIcon {
   color: black;
+  /*margin-right: 2%;*/
 }
 
 #whatsappIcon:hover,
@@ -935,6 +1214,8 @@ i {
   font-size: 14.5px;
   gap: -5rem;
 }
+
+
 
 
 
@@ -970,7 +1251,7 @@ i {
 .tabs {
   display: flex;
   flex-wrap: wrap;
-  font-family: sans-serif;
+  /*font-family: sans-serif; */
   justify-content: center;
   text-align: center;
 }
@@ -994,8 +1275,8 @@ i {
 
 .tabs__radio:checked+.tabs__label {
   font-weight: bold;
-  color: #009578;
-  border-bottom: 2px solid #009578;
+  color: #000000;
+  border-bottom: 2px solid #000000;
 }
 
 .tabs__radio:checked+.tabs__label+.tabs__content {
@@ -1041,6 +1322,11 @@ input[type="email"] {
   margin-left: 3%;
 }
 
+#nomeErro,
+#emailErro{
+  color: red;
+}
+
 input[type="text"] {
   width: 200px;
 }
@@ -1051,18 +1337,25 @@ input[type="email"] {
 }
 
 input[type="submit"] {
-  background-color: #007bff;
-  color: #fff;
+  background-color: rgb(0, 255, 128);
+  color: #000000;
+  font-weight: 500;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
   margin-top: 10px;
   width: 170px;
+  
+}
+
+input[type="submit"],
+input[type="submit"]:hover{
+  transition: background-color 1s ease-in-out 0s;
 }
 
 input[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: rgb(0, 214, 107);
 }
 
 .newsletter-form {
@@ -1124,13 +1417,54 @@ input[type="submit"]:hover {
 
 .newsletter-background-image {
   flex: 1;
-  background-image: url(https://images.pexels.com/photos/5969/wood-nature-forest-bridge.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb);
+  background-image: url(../assets/images/3_resized.jpg);
   background-size: cover;
-  background-position: right;
+  background-position: center;
+  background-position-x: 58%;
   z-index: -10;
 }
 
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
 
+.popup-content {
+  background-color: rgb(224, 201, 234);
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+#close-popup {
+  background-color: rgb(0, 255, 128);
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#close-popup,
+#close-popup:hover{
+  transition: background-color 1s ease-in-out 0s;
+}
+
+#close-popup {
+  background-color: rgb(0, 255, 128);
+}
+
+#close-popup:hover {
+  background-color: rgb(0, 214, 107); /* Cor de fundo ao passar o mouse (entrada) */
+}
 
 /* Estilo responsivo para telas menores */
 @media (max-width: 600px) {
@@ -1155,9 +1489,7 @@ input[type="submit"]:hover {
 
   #news {
     height: 112vh;
-    border-top: solid 1px;
-    border-bottom: solid 1px;
-    border-color: rgb(204, 203, 203);
+
     /* MUDAR DE ACORDO COM A COR DE FUNDO */
   }
 
@@ -1199,9 +1531,11 @@ input[type="submit"]:hover {
 
   #news {
     height: 112vh;
+    /*
     border-top: solid 1px;
     border-bottom: solid 1px;
-    border-color: rgb(204, 203, 203);
+    border-color: rgb(252, 152, 255);
+    */
     /* MUDAR DE ACORDO COM A COR DE FUNDO */
   }
 
