@@ -99,6 +99,7 @@ function closeLightBox() {
 }
 lightBoxContainer.addEventListener("click", closeLightBox);
 
+
 /*
 function verificarConexao() {
     if (navigator.onLine) {
@@ -123,11 +124,11 @@ const horaAtual = new Date().getHours();
 let mensagem;
 
 if (horaAtual >= 4 && horaAtual < 12) {
-  mensagem = "Olá, Bom Dia!";
+  mensagem = "Olá, bom dia!";
 } else if (horaAtual >= 12 && horaAtual < 18) {
-  mensagem = "Olá, Boa Tarde!";
+  mensagem = "Olá, boa tarde!";
 } else {
-  mensagem = "Olá, Boa Noite!";
+  mensagem = "Olá, boa noite!";
 }
 
 const mensagemSaudacao = document.getElementById("mensagemSaudacao");
@@ -182,6 +183,22 @@ window.addEventListener("load", function() {
 
 
 
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const isAutoRedirect = window.performance.getEntriesByType("navigation")[0].type === "navigate" && window.location.hash === "#news";
+
+  if (isAutoRedirect) {
+    document.getElementById("popup-container").style.display = "flex";
+
+    document.getElementById("close-popup").addEventListener("click", function () {
+      document.getElementById("popup-container").style.display = "none";
+    });
+  }
+});
 
 
 
