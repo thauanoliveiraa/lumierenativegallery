@@ -24,17 +24,22 @@
     <!-- CABEÇALHO -->
     <header id="inicio">
 
-        <a href="#inicio" class="image-link">
-            <img src="assets/images/lumière_native_logo2.png" alt="" id="imgMenu">
+        <div class="inicio-border"></div>
+
+        <a href="#" class="image-link">
+            <img src="assets/images/lumière_native_logo2.png" alt="Lumière Native" id="imgMenu" title="Lumière Native ©">
         </a>
 
         <div id="menu">
 
             <ul class="">
-                <li><a href="#apresentation" class="a-menu">Início</a></li>
-                <li><a href="#products" class="a-menu">Produtos</a></li>
-                <li><a href="#news" class="a-menu">Novidades</a></li>
-                <li><a href="#contact" class="a-menu">Contato</a></li>
+                <li class="navbar-li zoom-element"><a href="#apresentation" class="a-menu">Início</a></li>
+
+                <li class="navbar-li zoom-element"><a href="#products" class="a-menu">Produtos</a></li>
+                
+                <li class="navbar-li zoom-element"><a href="#news" class="a-menu">Novidades</a></li>
+                
+                <li class="navbar-li zoom-element"><a href="#contact" class="a-menu">Contato</a></li>
             </ul>
 
         </div>
@@ -58,20 +63,25 @@
                     </div>
 
                     <div id="apresentation-text-text" class="apresentation-typing-effect-text">
-                        Seja bem vindo(a) à <span id="important-mensage">Galeria Lumière Native</span>, aqui você encontrará
-                        imagens atualizadas de todos os produtos disponíveis e presentes na loja, espero que goste!
+                        Seja bem vindo(a) à <span id="important-mensage">Galeria Lumière Native</span>, aqui você
+                        encontrará
+                        imagens atualizadas de todos os produtos disponíveis e presentes na loja, espero que goste.
                     </div>
                 </div>
 
+                
+                
 
                 <div class="apresentation-buy-div">
+                    
                     <a href="https://shopee.com.br/" target="_blank" rel="external">
-                        <button id="apresentation-botaoRedirecionar" class="apresentation-buy-button">Quer saber mais? Clique e conheça nossa loja</button> 
+                        <button id="apresentation-botaoRedirecionar" class="apresentation-buy-button">Quer saber mais?
+                            Clique e conheça nossa loja!</button>
 
                         <!-- ICONE PLANTINHA (AJUSTAR)
                         <i class="fa fa-leaf"></i>
                         -->
-                    
+
                     </a>
                 </div>
             </div>
@@ -81,29 +91,29 @@
 
         <section id="products">
 
-            <h1 class="pageTitle title">Galeria de produtos</h1>
-        
+            <h1 class="pageTitle title productsTitle">Galeria de produtos</h1>
+
             <div class="tabs">
 
                 <input type="radio" class="tabs__radio" name="tabs-example" id="tab0" checked>
-        
+
                 <label for="tab0" class="tabs__label">Todos</label>
 
                 <div class="tabs__content">
 
                     <h1 class="tabTitle">Todos os produtos</h1>
                     <div id="product-tab2" class="gallery-container">
-        
+
                         <div class="gallery-item" data-index="1">
                             <img
                                 src="https://images.pexels.com/photos/39811/pexels-photo-39811.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb">
                         </div>
-        
+
                         <div class="gallery-item" data-index="2">
                             <img
                                 src="https://images.pexels.com/photos/5969/wood-nature-forest-bridge.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb">
                         </div>
-        
+
                         <div class="gallery-item" data-index="3">
                             <img
                                 src="https://images.pexels.com/photos/5969/wood-nature-forest-bridge.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb">
@@ -139,7 +149,7 @@
                             <img
                                 src="https://images.pexels.com/photos/5969/wood-nature-forest-bridge.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb">
                         </div>
-        
+
                         <div class="gallery-item" data-index="10">
                             <img
                                 src="https://images.pexels.com/photos/5969/wood-nature-forest-bridge.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb">
@@ -161,25 +171,25 @@
                 </div>
 
                 <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
-        
-                <label for="tab1" class="tabs__label">Produto 1</label>
+
+                <label for="tab1" class="tabs__label">Sabonetes</label>
 
 
                 <div class="tabs__content">
 
-                    <h1 class="tabTitle">Produto 1</h1>
+                    <h1 class="tabTitle">Sabonetes</h1>
                     <div id="product-tab2" class="gallery-container">
-        
+
                         <div class="gallery-item" data-index="1">
                             <img
                                 src="https://images.pexels.com/photos/39811/pexels-photo-39811.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb">
                         </div>
-        
+
                         <div class="gallery-item" data-index="2">
                             <img
                                 src="https://images.pexels.com/photos/5969/wood-nature-forest-bridge.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb">
                         </div>
-        
+
                         <div class="gallery-item" data-index="3">
                             <img
                                 src="https://images.pexels.com/photos/5969/wood-nature-forest-bridge.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb">
@@ -204,19 +214,19 @@
                 </div>
 
                 <input type="radio" class="tabs__radio" name="tabs-example" id="tab2" checked>
-        
-                <label for="tab2" class="tabs__label">Produto 2</label>
+
+                <label for="tab2" class="tabs__label">Geleias de banho</label>
 
                 <div class="tabs__content">
 
-                    <h1 class="tabTitle">Produto 2</h1>
+                    <h1 class="tabTitle">Geleias de banho</h1>
                     <div id="product-tab2" class="gallery-container">
-        
+
                         <div class="gallery-item" data-index="1">
                             <img
                                 src="https://images.pexels.com/photos/39811/pexels-photo-39811.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb">
                         </div>
-        
+
                         <div class="gallery-item" data-index="2">
                             <img
                                 src="https://images.pexels.com/photos/5969/wood-nature-forest-bridge.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb">
@@ -226,7 +236,7 @@
                             <img
                                 src="https://images.pexels.com/photos/5969/wood-nature-forest-bridge.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb">
                         </div>
-        
+
                         <div class="gallery-item" data-index="4">
                             <img
                                 src="https://images.pexels.com/photos/5969/wood-nature-forest-bridge.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb">
@@ -236,24 +246,24 @@
 
 
                 <input type="radio" class="tabs__radio" name="tabs-example" id="tab3" checked>
-        
-                <label for="tab3" class="tabs__label">Produto 3</label>
+
+                <label for="tab3" class="tabs__label">Esfoliantes</label>
 
                 <div class="tabs__content">
 
-                    <h1 class="tabTitle">Produto 3</h1>
+                    <h1 class="tabTitle">Esfoliantes</h1>
                     <div id="product-tab2" class="gallery-container">
-        
+
                         <div class="gallery-item" data-index="1">
                             <img
                                 src="https://images.pexels.com/photos/39811/pexels-photo-39811.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb">
                         </div>
-        
+
                         <div class="gallery-item" data-index="2">
                             <img
                                 src="https://images.pexels.com/photos/5969/wood-nature-forest-bridge.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb">
                         </div>
-        
+
                         <div class="gallery-item" data-index="3">
                             <img
                                 src="https://images.pexels.com/photos/5969/wood-nature-forest-bridge.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb">
@@ -273,24 +283,24 @@
 
 
                 <input type="radio" class="tabs__radio" name="tabs-example" id="tab4" checked>
-        
-                <label for="tab4" class="tabs__label">Produto 4</label>
+
+                <label for="tab4" class="tabs__label">Velas aromáticas</label>
 
                 <div class="tabs__content">
 
-                    <h1 class="tabTitle">Produto 4</h1>
+                    <h1 class="tabTitle">Velas aromáticas</h1>
                     <div id="product-tab2" class="gallery-container">
-        
+
                         <div class="gallery-item" data-index="1">
                             <img
                                 src="https://images.pexels.com/photos/39811/pexels-photo-39811.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb">
                         </div>
-        
+
                         <div class="gallery-item" data-index="2">
                             <img
                                 src="https://images.pexels.com/photos/5969/wood-nature-forest-bridge.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb">
                         </div>
-        
+
                         <div class="gallery-item" data-index="3">
                             <img
                                 src="https://images.pexels.com/photos/5969/wood-nature-forest-bridge.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb">
@@ -304,7 +314,7 @@
                 <a href="https://shopee.com.br/" target="_blank" rel="external">
                     <button id="botaoRedirecionar" class="buy-button">Gostou de algo? Clique aqui para comprar<i
                             class="fa fa-shopping-cart"></i>
-                            
+
                     </button>
                 </a>
 
@@ -315,46 +325,64 @@
 
 
         <section id="news">
-            
+
             <div class="newsletter-content">
 
                 <div class="newsletter-testee">
                     <h1 class="pageTitle title newsletter-title">Inscreva-se na newsletter Lumière Native</h1>
 
-                    <p class="newsletter-text">Psiu... Quer receber novidades em primeira mão à respeito de produtos 1, produtos 2, produtos 3 e produtos 4? Cadastre-se na nossa newsletter e receba tudo em primeira mão, desde dicas, informações sobre novos produtos e ofertas exclusivas!</p>
+                    <p class="newsletter-text">Psiu... Quer receber novidades em primeira mão à respeito dos sabonetes,
+                        geleias de banho, esfoliantes, velas aromáticas e muito mais? Cadastre-se na nossa newsletter e receba tudo em primeira mão, desde dicas, informações sobre novos produtos e ofertas exclusivas!</p>
 
                     <div class="formulario">
 
-                        <form class="newsletter-form" action="https://formsubmit.co/bf383f5b7f86fce53266ee9e69c1a9bb" method="POST" data-form onsubmit="return validar()">
+                        <form class="newsletter-form" action="https://formsubmit.co/bf383f5b7f86fce53266ee9e69c1a9bb"
+                            method="POST" data-form onsubmit="return validar()">
 
-                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-                        <input type="hidden" name="_subject" value="NOVA INSCRIÇÃO NA NEWSLETTER!">
-                        <!-- 
-                        <input type="hidden" name="_next" value="http://127.0.0.1:5000/thanks" /> 
-                        
-                        CONFIGURAR PAGINA DE PROXIMO
-                        -->
-                        <input type="hidden" name="_captcha" value="false" />
+                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                            
+                            <input type="hidden" name="_subject" value="NOVA INSCRIÇÃO NA NEWSLETTER!">
+
+                            <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html#news" />
+
+                            <input type="hidden" name="_captcha" value="false" />
+
+                            <input type="hidden" name="_autoresponse" value="Inscrição na newsletter confirmada! Em breve você receberá novidades em primeiríssima mão, obrigado.">
 
                             <div class="input-group input-name">
                                 <label for="nome" class="label-text">Nome:</label>
 
-                                <input type="text" id="nome" name="nome" required placeholder="Digite o seu nome" maxlength="30" oninput="nameValidate()" class="newsletter-input" required
-                                oninvalid="this.setCustomValidity('Por favor, preencha este campo.')"
-                                onchange="try{setCustomValidity('')}catch(e){}">
-
+                                <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" maxlength="35" class="newsletter-input" required>
+                                <br>
+                                <span id="nomeErro"></span>
                             </div>
+                            
+                          
 
                             <div class="input-group input-email">
                                 <label for="email" class="label-text">Email:</label>
 
-                                <input type="email" id="email" name="email" required placeholder="Digite o seu melhor e-mail" oninput="emailValidate()" class="newsletter-input">
-
+                                <input type="email" id="email" name="email" required
+                                    placeholder="Digite o seu melhor e-mail"
+                                    class="newsletter-input">
+                                <br>
+                                <span id="emailErro"></span>    
+                                
                             </div>
 
-                            <input type="submit" value="Enviar">
+                            <input type="submit" id="botaoSubmit" value="Enviar" disabled>
                         </form>
                     </div>
+
+                    <!-- Código do Popup -->
+                    <div id="popup-container" class="popup-container">
+                        <div class="popup-content">
+                            <p>Inscrição na newsletter confirmada!<br>Em breve as novidades chegarão.</p>
+                            <button id="close-popup">Fechar</button>
+                        </div>
+                    </div>
+                    <!-- Fim do Código do Popup -->
+
                 </div>
 
                 <div class="newsletter-background-image"></div>
@@ -372,7 +400,7 @@
 
 
 
-            
+
         </section>
     </main>
 
@@ -389,6 +417,65 @@
                 <br>
             <div class="contactIcons">
 
+                <ul class="ul-contact-icons">
+                    
+                    <li>
+                        <a href="https://wa.me/5571987826197" title="WhatsApp">
+                            <i class="fab fa-whatsapp" id="whatsappIcon"></i>
+                        </a>
+
+                        <br>
+
+                        <p class="p-ul-li-contact-icons">WhatsApp</p>
+                    </li>
+
+
+                    <li>
+                        <a href="https://www.instagram.com/lumierenative/" title="Instagram">
+                            <i class="fab fa-instagram" id="instagramIcon"></i>
+                        </a>
+
+                        <br>
+
+                        <p class="p-ul-li-contact-icons">Instagram</p>
+                    </li>
+
+                
+                    <li>
+                        <a href="">
+                            <i class="fab fa-tiktok" id="tiktokIcon" title="TikTok"></i>
+                        </a>
+                                                
+                        <br>
+
+                        <p class="p-ul-li-contact-icons">TikTok</p>
+                    </li>
+
+
+                    <li>
+                        <a href="mailto:lumierenative@gmail.com" title="Google E-mail">
+                            <i class="fab fa-google" id="googleIcon"></i>
+                        </a>
+                                                
+                        <br>
+
+                        <p class="p-ul-li-contact-icons">Gmail</p>
+                    </li>
+
+
+                    <li>
+                        <a href="https://br.pinterest.com/lumierenative/" title="Pinterest">
+                            <i class="fab fa-pinterest-p" id="pinterestIcon"></i>
+                        </a>  
+                                                
+                        <br>
+
+                        <p class="p-ul-li-contact-icons">Pinterest</p>     
+                    </li>
+                </ul>
+
+
+                <!-- 
                 <a href="https://wa.me/5571986015193" title="WhatsApp">
                     <i class="fab fa-whatsapp" id="whatsappIcon"></i>
                 </a>
@@ -409,7 +496,10 @@
                 <a href="https://br.pinterest.com/lumierenative/" title="Pinterest">
                     <i class="fab fa-pinterest-p" id="pinterestIcon"></i>
                 </a>
+                -->   
+                
 
+                <!--
                 <ul class="icons-ul-footer">
                     <li>WhatsApp</li>
                     <li>Instagram</li>
@@ -417,19 +507,25 @@
                     <li>Gmail</li>
                     <li>Pinterest</li>
                 </ul>
-
+                
+                -->
             </div>
             </p>
-            
+
             <p class="footer-copyright">Lumière Native ©<br>
-                2023 <a href="https://docs.google.com/document/d/12mpCWVDGD1nJvY6J_ePYCfj1V0n68p8s-0dOM7Vtfwc/edit?usp=sharing" id="ancoraFooter" title="Todos os direitos reservados à Lumière Native©" target="_blank" rel="external">Todos os direitos reservados</a>
+                2023 <a
+                    href="https://docs.google.com/document/d/12mpCWVDGD1nJvY6J_ePYCfj1V0n68p8s-0dOM7Vtfwc/edit?usp=sharing"
+                    id="ancoraFooter" title="Todos os direitos reservados à Lumière Native©" target="_blank"
+                    rel="external">Todos os direitos reservados</a>
             </p>
-            <p>website development by <a href="https://www.linkedin.com/in/thauan-de-oliveira-ramos-396b66224"
-                    id="ancoraFooter" title="Desenvolvido por Thauan Oliveira" target="_blank" rel="external">Thauan Oliveira</a></p>
+            <p class="footer-development">website development by <a href="https://www.linkedin.com/in/thauan-de-oliveira-ramos-396b66224"
+                    id="ancoraFooter" title="Desenvolvido por Thauan Oliveira" target="_blank" rel="external">Thauan
+                    Oliveira</a></p>
         </div>
     </footer>
 
     <script src="scripts/script.js"></script>
+    <script src="scripts/regex.js"></script>
 </body>
 
 </html>
